@@ -49,6 +49,14 @@ table {
 
 /* Add CSS styling here */
 
+/* *{
+  box-sizing: border-box;  
+  color: black;
+  margin: 0;
+  max-width: 100%;
+  border: 1px solid grey; 
+} */
+
 h1{
     font-size: 50px;
 }
@@ -59,10 +67,6 @@ h2{
 
 p{
     font-size: 25px;
-}
-
-nav{
-
 }
 
 header{
@@ -77,13 +81,15 @@ footer{
     padding: 20px;
 }
 
-hr.rounded{;
+hr.rounded{
     border-top: 8px solid #cab6a8;
     border-radius: 5px;
 }
 
 .profilepic{
-    border-radius: 50%;
+    width: 20%;
+    height: auto;
+    padding: 2%;
 }
 
 .top{
@@ -92,13 +98,14 @@ hr.rounded{;
     justify-content: space-evenly;
 }
 
-.bio{
-    padding: 20px;
+.img{
+    width: 25rem;
+    height: auto;
 }
 
-.img {
-    width: 400px;
-    height: 250px;
+.bio{
+    padding: 5%;
+    text-align: center;
 }
 
 .row{
@@ -129,4 +136,84 @@ button:hover {
 button a {
     text-decoration: none;
     color: inherit;
+}
+
+@media(max-width:500px){
+  header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  button{
+    width: 30%;
+    margin: 1% 0;
+  }
+.top{
+        flex-direction: column;
+        align-items: center;
+    }
+  .bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:90%;
+  }
+  .row{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .row div{
+    width: 50%;
+    margin: 4% 0;
+  }
+}
+
+@media(max-width: 800px){
+   header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  button{
+    width: 30%;
+    margin: 1% 0;
+  }
+.top{
+        flex-direction: column;
+        align-items: center;
+    }
+  .bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:90%;
+  }
+  .row{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .row div{
+    width: 50%;
+    margin: 4% 0;
+  }
+  .img{
+    width:20rem;
+  }
+  .profilepic{
+    width: 70%;
+  }
 }
